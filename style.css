@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; 
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #FAFCFA; 
+    color: #333333;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    /* Убрали overflow-x: hidden отсюда, чтобы на телефонах скролл работал плавнее */
+}
+
+/* Обертка для всех карточек с отступами */
+.content-wrapper {
+    padding: 20px 15px 40px; /* Отступы от краев экрана (снизу побольше) */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Расстояние между всеми стеклянными карточками */
+    max-width: 500px;
+    margin: 0 auto; /* Центрируем контент */
+    overflow-x: hidden;
+}
+
+/* --- Декор для заднего фона (Цветовые пятна) --- */
+.blob {
+    /* Теперь position: fixed, чтобы пятна стояли на месте при прокрутке страницы вниз */
+    position: fixed; 
+    border-radius: 50%;
+    filter: blur(60px); 
+    z-index: -1; 
+}
+
+.blob-green {
+    width: 250px;
+    height: 250px;
+    background: #A8D5BA; 
+    top: -50px;
+    left: -80px;
+}
+
+.blob-orange {
+    width: 200px;
+    height: 200px;
+    background: #F4CCA1; 
+    bottom: 10%;
+    right: -50px;
+}
+
+/* --- Настройки Гласс Бокса (Матовое стекло) --- */
+.glass-box {
+    background: rgba(255, 255, 255, 0.45); 
+    backdrop-filter: blur(16px); 
+    -webkit-backdrop-filter: blur(16px); 
+    border: 1px solid rgba(255, 255, 255, 0.8); 
+    box-shadow: 0 8px 32px rgba(44, 62, 53, 0.08); 
+    border-radius: 35px; 
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+/* --- Стили для первого блока (Шапка) --- */
+.photo-wrapper {
+    width: 145px;
+    height: 145px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #A8D5BA 0%, #F4CCA1 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px; 
+    box-shadow: 0 8px 20px rgba(168, 213, 186, 0.4);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #FFFFFF;
+}
+
+.specialist-name {
+    font-size: 28px;
+    color: #2F473B;
+    margin-bottom: 25px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.specialist-description {
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+.desc-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 20px; 
+}
+
+.icon {
+    width: 42px;  
+    height: 42px; 
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.desc-item p {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #5C6E66;
+    font-weight: 600;
+    margin: 0;
+}
+
+.desc-item strong {
+    color: #DE8F6E;
+    font-weight: 800;
+}
+
+/* --- НОВОЕ: Стили для второго блока (С чем я могу помочь) --- */
+
+.section-title {
+    font-size: 24px;
+    color: #2F473B;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.section-intro {
+    font-size: 15px;
+    color: #5C6E66;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Отступы между пунктами проблем */
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    gap: 12px; /* Отступ от кружочка до текста */
+}
+
+/* Маленький оранжевый кружок (маркер) для списка проблем */
+.service-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #DE8F6E;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px; /* Выравнивание кружочка по первой строке текста */
+}
+
+.service-item p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #5C6E66;
+    margin: 0;
+}
+
+.service-item strong {
+    color: #DE8F6E;
+    font-weight: 800;
+}
+
+.tools-subtitle {
+    font-size: 16px;
+    color: #2F473B;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.tools-tags {
+    display: flex;
+    flex-wrap: wrap; /* Разрешаем плашкам переноситься на новую строку */
+    justify-content: center; /* Центрируем их */
+    gap: 10px; /* Расстояние между плашками */
+}
+
+.tag {
+    background-color: rgba(168, 213, 186, 0.25); /* Очень легкий зеленый фон */
+    border: 1px solid rgba(168, 213, 186, 0.6); /* Полупрозрачная зеленая рамка */
+    color: #2F473B;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.consult-card {
+    background: #FFFFFF; /* Плотный белый фон, чтобы выделялось из стекла */
+    border: 2px solid #A8D5BA; /* Четкая зеленоватая рамка в 2 пикселя */
+    border-radius: 20px;
+    padding: 25px 20px;
+    margin-bottom: 25px; /* Увеличили отступ между карточками */
+    text-align: left;
+    box-shadow: 0 8px 24px rgba(44, 62, 53, 0.12); /* Усилили тень для 3D эффекта */
+}
+.consult-card:last-child { margin-bottom: 0; } /* Убираем отступ у последней карточки */
+
+.consult-title {
+    font-size: 18px;
+    color: #2F473B;
+    font-weight: 800;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+/* Теги цены и времени */
+.consult-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+.c-tag {
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 800;
+}
+.tag-price {
+    background: #DE8F6E;
+    color: #FFFFFF;
+}
+.tag-time {
+    background: rgba(168, 213, 186, 0.4);
+    color: #2F473B;
+}
+
+/* Текст и списки внутри карточки */
+.consult-text {
+    font-size: 15px;
+    color: #4A5D54;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+.consult-list {
+    margin: 0 0 15px 20px;
+    color: #4A5D54;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.consult-list li {
+    margin-bottom: 6px;
+    padding-left: 5px;
+}
+
+/* Блок бонусов (упражнения, смс поддержка) */
+.consult-bonus {
+    background: rgba(222, 143, 110, 0.12); /* Очень легкий оранжевый */
+    border-radius: 12px;
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #B56241;
+    margin-top: 15px;
+    border: 1px dashed rgba(222, 143, 110, 0.5);
+}
+
+/* Блок заметок (интересный факт, примечание) */
+.consult-note {
+    border-left: 4px solid #DE8F6E;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 15px;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #5C6E66;
+    border-radius: 0 10px 10px 0;
+}
+
+/* --- Блок формата работы (Онлайн) --- */
+.online-text {
+    font-size: 18px;
+    color: #2F473B;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.online-text strong {
+    color: #DE8F6E;
+    font-weight: 800;
+}
+
+/* Пульсирующий кружок (индикатор онлайн) */
+.online-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #DE8F6E;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(222, 143, 110, 0.8);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(222, 143, 110, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(222, 143, 110, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(222, 143, 110, 0); }
+}
+
+.online-platforms {
+    background: rgba(168, 213, 186, 0.3);
+    color: #2F473B;
+    padding: 8px 15px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+/* --- Блок способов связи (Кнопки в один ряд) --- */
+.contact-links-row {
+    display: flex;
+    flex-direction: row; /* Ставит кнопки в один горизонтальный ряд */
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+/* Общий стиль для кнопок (добавлено выравнивание для иконки) */
+.btn-contact {
+    flex: 1; 
+    /* display: block; меняем на flex, чтобы иконка и текст встали ровно в ряд */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Расстояние между иконкой и текстом */
+    
+    text-decoration: none;
+    padding: 16px 5px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 800;
+    transition: all 0.2s ease; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+    border: 2px solid transparent;
+}
+
+/* Эффект физического нажатия */
+.btn-contact:active {
+    transform: translateY(4px) scale(0.97);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-inst {
+    /* Нежный пастельно-оранжевый градиент для фона */
+    background: linear-gradient(45deg, #FFF8F0 0%, #FFE6D0 100%); 
+    /* Наш фирменный оранжевый цвет для надписи и иконки */
+    color: #DE8F6E; 
+    /* Рамка в тон */
+    border-color: #F4CCA1; 
+}
+
+.btn-tg {
+    /* Нежный пастельно-оранжевый градиент для фона */
+    background: linear-gradient(45deg, #FFF8F0 0%, #FFE6D0 100%); 
+    /* Наш фирменный оранжевый цвет для надписи и иконки */
+    color: #DE8F6E; 
+    /* Рамка в тон */
+    border-color: #F4CCA1; 
+}
+
+/* Красивое подчеркивание для текста */
+.underlined-text {
+    text-decoration: underline;
+    text-underline-offset: 4px; /* Отодвигаем линию чуть вниз от букв */
+    text-decoration-thickness: 2px; /* Делаем линию выразительной */
+}
+
+.btn-phone {
+    background-color: #FDF7F2;
+    color: #DE8F6E;
+    border-color: #F4CCA1;
+    justify-content: center;
+}
