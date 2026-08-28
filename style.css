@@ -104,7 +104,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.8); 
     box-shadow: 0 8px 32px rgba(44, 62, 53, 0.08); 
     border-radius: 35px; 
-    padding: 40px 20px;
+    padding: 25px 20px;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -450,8 +450,9 @@ body {
 
 /* --- Карусель для страницы браслетов --- */
 .bracelet-image-wrapper {
-    width: 100%;
+    width: 80%;
     max-width: 400px;
+    max-height: 450px;
     margin: 0 auto 8px auto; /* Уменьшили нижний отступ для подсказки */
     border-radius: 25px;
     overflow: hidden;
@@ -570,4 +571,71 @@ body {
 .value-text strong {
     color: #2d3e36;
     font-weight: 800;
+}
+
+/* --- Стили для блока отзывов --- */
+.reviews-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.review-card {
+    flex: 0 0 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 20px 60px;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.review-author {
+    text-align: right;
+    color: #889990;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.review-text {
+    font-size: 15px;
+    color: #4A5D54;
+    line-height: 1.5;
+    margin: 0;
+    /* Ограничение в 10 строк */
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.review-text.expanded {
+    -webkit-line-clamp: unset;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: #DE8F6E;
+    font-weight: 800;
+    font-size: 14px;
+    padding: 0;
+    margin-top: 8px;
+    cursor: pointer;
+    text-align: left;
+    display: none; /* Скрыта по умолчанию, покажет JS если текста много */
+    font-family: 'Nunito', sans-serif;
+}
+
+.review-date {
+    text-align: right;
+    color: #889990;
+    font-size: 13px;
+    margin-top: 15px;
 }
