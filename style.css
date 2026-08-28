@@ -17,13 +17,58 @@ body {
 
 /* Обертка для всех карточек с отступами */
 .content-wrapper {
-    padding: 20px 15px 40px; /* Отступы от краев экрана (снизу побольше) */
+    padding: 100px 15px 40px; /* Отступы от краев экрана (снизу побольше) */
     display: flex;
     flex-direction: column;
     gap: 20px; /* Расстояние между всеми стеклянными карточками */
     max-width: 500px;
     margin: 0 auto; /* Центрируем контент */
     overflow-x: hidden;
+}
+
+/* --- НОВЫЙ БЛОК: Стеклянная навигация (iOS Style) --- */
+.glass-nav {
+    position: fixed; 
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: calc(100% - 30px);
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 25px rgba(44, 62, 53, 0.08);
+    border-radius: 25px;
+    padding: 6px;
+    z-index: 1000; 
+}
+
+.segment-control {
+    display: flex;
+    background: rgba(168, 213, 186, 0.25);
+    border-radius: 20px;
+    position: relative;
+}
+
+.segment-btn {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    background: transparent;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #5C6E66;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.segment-btn.active {
+    background: #FFFFFF;
+    color: #2F473B;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* --- Декор для заднего фона (Цветовые пятна) --- */
@@ -401,4 +446,128 @@ body {
     color: #DE8F6E;
     border-color: #F4CCA1;
     justify-content: center;
+}
+
+/* --- Карусель для страницы браслетов --- */
+.bracelet-image-wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 8px auto; /* Уменьшили нижний отступ для подсказки */
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(44, 62, 53, 0.12);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Включаем "примагничивание" слайдов */
+    -webkit-overflow-scrolling: touch; /* Плавный скролл на iOS */
+    scrollbar-width: none; /* Прячем ползунок прокрутки в Firefox */
+}
+
+/* Прячем ползунок прокрутки в Chrome и Safari */
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-img {
+    flex: 0 0 100%; /* Каждая картинка занимает ровно 100% ширины */
+    width: 100%;
+    height: 500px; /* Фиксированная высота, чтобы карусель не прыгала */
+    object-fit: cover; /* Картинки будут красиво обрезаться под нужный размер, не сплющиваясь */
+    scroll-snap-align: center; /* Картинка всегда встает ровно по центру при остановке листания */
+}
+
+.carousel-hint {
+    text-align: center;
+    font-size: 13px;
+    color: #5C6E66;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #2F473B;
+    font-size: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.carousel-btn:active {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-50%) scale(0.9);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Специальный класс для горизонтальных картинок второй карусели */
+.carousel-img-horizontal {
+    flex: 0 0 100%; 
+    width: 100%;
+    height: 260px; /* Уменьшенная высота делает формат прямоугольным (горизонтальным) */
+    object-fit: cover; 
+    scroll-snap-align: center; 
+}
+
+/* --- Стили для текстового блока ценности талисмана --- */
+.value-quote {
+    background: linear-gradient(135deg, rgba(222, 143, 110, 0.15) 0%, rgba(244, 204, 161, 0.15) 100%);
+    border-left: 4px solid #DE8F6E;
+    border-right: 4px solid #DE8F6E;
+    padding: 18px 20px;
+    border-radius: 15px 15px 15px 15px;
+    font-size: 16px;
+    color: #26362e;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.value-quote strong {
+    color: #DE8F6E;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.value-text {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #2b4338;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.value-text:last-child {
+    margin-bottom: 0;
+}
+
+.value-text strong {
+    color: #2d3e36;
+    font-weight: 800;
 }
