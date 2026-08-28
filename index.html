@@ -16,8 +16,16 @@
     <div class="blob blob-green"></div>
     <div class="blob blob-orange"></div>
 
+    <nav class="glass-nav">
+        <div class="segment-control">
+            <button class="segment-btn active" id="btn-psy">Психология</button>
+            <button class="segment-btn" id="btn-bracelets">Браслеты</button>
+            <button class="segment-btn" id="btn-contacts">Связь</button>
+        </div>
+    </nav>
+
     <!-- Основной контейнер, в котором лежат все наши стеклянные карточки -->
-    <main class="content-wrapper">
+    <main class="content-wrapper" id="content-psy">
         
         <!-- ПЕРВЫЙ ГЛАСС БОКС: Шапка профиля -->
         <header class="glass-box">
@@ -151,14 +159,126 @@
                 </div>
                 <div class="consult-bonus">
                     <strong>В стоимость включено:</strong><br>
+                    Дополнительные упражнения для самостоятельной работы.
+                </div>
+            </div>
+
+            <div class="consult-card">
+                <h3 class="consult-title">Формат 4: Глубинная работа + поддержка</h3>
+                <div class="consult-tags">
+                    <span class="c-tag tag-price">10 000 ₽</span>
+                    <span class="c-tag tag-time">До 3-х часов</span>
+                </div>
+                <p class="consult-text">Глубинная работа с запросом до решения вашей проблемы. На этой консультации я использую <strong>все методы и инструменты</strong>, которыми владею.</p>
+                <div class="consult-note" style="background-color: rgba(168, 213, 186, 0.3); border-left-color: #7BB896;">
+                    В 80% случаев достаточно <strong>одной консультации</strong> для решения вашего запроса.
+                </div>
+                <div class="consult-bonus">
+                    <strong>В стоимость включено:</strong><br>
                     • Обратная связь (смс-поддержка) в течение месяца после сессии.<br>
                     • Дополнительные упражнения для самостоятельной работы.
                 </div>
             </div>
 
         </section>
+        
+    </main>
 
-        <!-- ПЯТЫЙ БЛОК: Формат работы -->
+        <!-- ВКЛАДКА 2: Контент по Браслетам (изначально скрыта) -->
+        <!-- ВКЛАДКА 2: Контент по Браслетам (изначально скрыта) -->
+    <main class="content-wrapper" id="content-bracelets" style="display: none;">
+        
+        <!-- Первый блок: Описание и запросы -->
+        <section class="glass-box">
+            <h2 class="section-title">Программные браслеты</h2>
+            
+            <!-- Обертка для изображения -->
+            <div class="bracelet-image-wrapper">
+
+                <button class="carousel-btn prev-btn" id="prev-btn">&#10094;</button>
+                <button class="carousel-btn next-btn" id="next-btn">&#10095;</button>
+
+                <div class="carousel-container" id="bracelet-carousel">
+
+                    <img src="bracelet-1.jpg" class="carousel-img">
+                    <img src="bracelet-2.jpg" class="carousel-img">
+                    <img src="bracelet-3.jpg" class="carousel-img">
+                    <img src="bracelet-4.jpg" class="carousel-img">
+                    <img src="bracelet-5.jpg" class="carousel-img">
+                </div>
+            </div>
+
+            <p class="section-intro">Создаю программные браслеты и персональные амулеты под конкретного человека и его личный запрос.</p>
+            
+            <p class="tools-subtitle">Запросы, с которыми я работаю:</p>
+            
+            <!-- Список запросов в виде тегов -->
+            <div class="tools-tags">
+                <span class="tag">Деньги</span>
+                <span class="tag">Отношения</span>
+                <span class="tag">Спокойствие</span>
+                <span class="tag">Защита</span>
+                <span class="tag">Уверенность</span>
+                <span class="tag">Удача</span>
+                <span class="tag">Любовь к себе</span>
+                <span class="tag">Восполнение энергии</span>
+                <span class="tag">Здоровье</span>
+                <span class="tag">Реализация</span>
+                <span class="tag">Известность</span>
+                <span class="tag">Зачатие и рождение ребенка</span>
+                <span class="tag">Женственность</span>
+                <span class="tag">Мужественность</span>
+                <span class="tag">Помощь в судебных делах</span>
+                <span class="tag">Успехи в учебе</span>
+                <span class="tag">Исполнение желаний</span>
+                <span class="tag">Избавление от зависимостей</span>
+            </div>
+        </section>
+
+        <!-- Второй блок: Методы подбора и вторая карусель -->
+        <section class="glass-box">
+            <p class="section-intro">Для создания более сильного и эффективного «помощника», использую различные методы подбора:</p>
+            
+            <!-- Методы в виде тегов -->
+            <div class="tools-tags" style="margin-bottom: 25px;">
+                <span class="tag">Дата рождения</span>
+                <span class="tag">Чакральный разбор</span>
+                <span class="tag">Диагностика состояния на камнях</span>
+                <span class="tag">Интуитивный подбор</span>
+            </div>
+            
+            <!-- Вторая карусель с новыми ID для стрелочек -->
+            <div class="bracelet-image-wrapper">
+                <button class="carousel-btn prev-btn" id="prev-btn-2">&#10094;</button>
+                <button class="carousel-btn next-btn" id="next-btn-2">&#10095;</button>
+                
+                <div class="carousel-container" id="bracelet-carousel-2">
+                    <img src="certificate-1.jpg" class="carousel-img-horizontal">
+                    <img src="certificate-2.jpg" class="carousel-img-horizontal">
+                    <img src="certificate-3.jpg" class="carousel-img-horizontal">
+                    <img src="certificate-4.jpg" class="carousel-img-horizontal">
+                </div>
+            </div>
+        </section>
+
+        <!-- Третий блок: Ценность и результаты -->
+        <section class="glass-box">
+            <div class="value-quote">
+                Заказывая у меня свой талисман, вы получаете не просто камни, вы получаете <strong>решение своей проблемы</strong>, индивидуальный расчет и инструмент поддержки на годы.
+            </div>
+            
+            <p class="value-text">
+                Энергия, которую даст вам браслет, поможет быстрее прийти к вашей цели, изменить ваше состояние, реакции, поведение, качество отношений и состояние здоровья. 
+            </p>
+            <p class="value-text">
+                Вы начнете замечать возможности и легче делать новые выборы, чувствовать <strong>защиту, поддержку и уверенность</strong>.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- ВКЛАДКА 3: Связь со мной (изначально скрыта) -->
+    <main class="content-wrapper" id="content-contacts" style="display: none;">
         <section class="glass-box">
             <p class="online-text">
                 <span class="online-dot"></span> Работаю <strong>онлайн</strong> (по видеосвязи)
@@ -168,13 +288,11 @@
             </div>
         </section> 
 
-        <!-- ШЕСТОЙ БЛОК: Способы связи -->
-        <!-- ШЕСТОЙ БЛОК: Способы связи -->
         <section class="glass-box">
-            <h2 class="section-title">Связаться со мной</h2>
+            <h2 class="section-title">Способы связи со мной</h2>
             
             <div class="contact-links-row" style="margin-top: 15px;">
-                <a href="tel:+79232198100" id="phone-btn" class="btn-contact btn-phone">
+                <a href="tel:+79232178100" id="phone-btn" class="btn-contact btn-phone">
                     <span class="underlined-text">+7 (923) 219-81-00</span>
                 </a>
             </div>
@@ -195,7 +313,6 @@
             </div>
             
         </section>
-
     </main>
 
     <script src="script.js"></script>
