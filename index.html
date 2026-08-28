@@ -7,12 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Цветовые пятна для заднего фона (теперь они зафиксированы) -->
     <div class="blob blob-green"></div>
     <div class="blob blob-orange"></div>
 
@@ -24,10 +22,8 @@
         </div>
     </nav>
 
-    <!-- Основной контейнер, в котором лежат все наши стеклянные карточки -->
     <main class="content-wrapper" id="content-psy">
         
-        <!-- ПЕРВЫЙ ГЛАСС БОКС: Шапка профиля -->
         <header class="glass-box">
             <div class="photo-wrapper">
                 <img src="new-photo.jpg" alt="Татьяна Голощапова" class="profile-photo">
@@ -48,17 +44,16 @@
                 
                 <div class="desc-item">
                     <img src="label3-remove.png" alt="Маркер" class="icon">
-                    <p>Эксперт по подбору натуральных камней</p>
+                    <p>Эксперт по подбору <strong>НАТУРАЛЬНЫХ КАМНЕЙ</strong></p>
                 </div>
                 
                 <div class="desc-item">
                     <img src="label4-remove.png" alt="Маркер" class="icon">
-                    <p>Создаю программные браслеты с бусинами Дзи</p>
+                    <p>Создаю <strong>ПРОГРАММНЫЕ БРАСЛЕТЫ</strong> с бусинами Дзи</p>
                 </div>
             </div>
         </header>
 
-        <!-- ВТОРОЙ ГЛАСС БОКС: С чем я могу помочь -->
         <section class="glass-box">
             <h2 class="section-title">С чем я могу помочь?</h2>
             <p class="section-intro">Работаю с любым некомфортным состоянием, которое волнует человека. Все то, что ему не нравится, от чего он устал, доставляет ему дискомфорт.</p>
@@ -87,7 +82,6 @@
             
             <p class="tools-subtitle">Работаю при помощи инструментов:</p>
             
-            <!-- Инструменты в виде красивых тегов -->
             <div class="tools-tags">
                 <span class="tag">Современная психосоматика</span>
                 <span class="tag">Зеркальная психология</span>
@@ -102,7 +96,6 @@
         <section class="glass-box">
             <h2 class="section-title">Варианты консультаций</h2>
             
-            <!-- Карточка 1: Диагностика -->
             <div class="consult-card">
                 <h3 class="consult-title">Диагностическая консультация-знакомство</h3>
                 <div class="consult-tags">
@@ -118,7 +111,6 @@
                 </div>
             </div>
 
-            <!-- Карточка 2: Активное слушание -->
             <div class="consult-card">
                 <h3 class="consult-title">Формат 1: Активное слушание</h3>
                 <div class="consult-tags">
@@ -132,7 +124,6 @@
                 </div>
             </div>
 
-            <!-- Карточка 3: Зеркальная психология -->
             <div class="consult-card">
                 <h3 class="consult-title">Формат 2: Зеркальный метод</h3>
                 <div class="consult-tags">
@@ -146,7 +137,6 @@
                 </div>
             </div>
 
-            <!-- Карточка 4: Глубинная работа -->
             <div class="consult-card">
                 <h3 class="consult-title">Формат 3: Глубинная работа</h3>
                 <div class="consult-tags">
@@ -154,9 +144,6 @@
                     <span class="c-tag tag-time">До 3-х часов</span>
                 </div>
                 <p class="consult-text">Глубинная работа с запросом до решения вашей проблемы. На этой консультации я использую <strong>все методы и инструменты</strong>, которыми владею.</p>
-                <div class="consult-note" style="background-color: rgba(168, 213, 186, 0.3); border-left-color: #7BB896;">
-                    В 80% случаев достаточно <strong>одной консультации</strong> для решения вашего запроса.
-                </div>
                 <div class="consult-bonus">
                     <strong>В стоимость включено:</strong><br>
                     Дополнительные упражнения для самостоятельной работы.
@@ -170,41 +157,152 @@
                     <span class="c-tag tag-time">До 3-х часов</span>
                 </div>
                 <p class="consult-text">Глубинная работа с запросом до решения вашей проблемы. На этой консультации я использую <strong>все методы и инструменты</strong>, которыми владею.</p>
-                <div class="consult-note" style="background-color: rgba(168, 213, 186, 0.3); border-left-color: #7BB896;">
-                    В 80% случаев достаточно <strong>одной консультации</strong> для решения вашего запроса.
-                </div>
                 <div class="consult-bonus">
                     <strong>В стоимость включено:</strong><br>
                     • Обратная связь (смс-поддержка) в течение месяца после сессии.<br>
                     • Дополнительные упражнения для самостоятельной работы.
                 </div>
             </div>
+        </section>
 
+        <section class="glass-box" style="display: flex; align-items: center; justify-content: center; gap: 20px; background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(222, 143, 110, 0.5); padding: 20px 25px;">
+            <div style="font-size: 42px; font-weight: 800; color: #DE8F6E; line-height: 1;">80%</div>
+            <p style="margin: 0; font-size: 15px; color: #4A5D54; text-align: left; line-height: 1.4;">
+                случаев требуют всего <strong style="color: #2F473B;">одной консультации</strong> для полного решения вашего запроса.
+            </p>
+        </section>
+
+
+        <section class="glass-box">
+            <h2 class="section-title">Отзывы</h2>
+            
+            <div class="reviews-wrapper">
+                <button class="carousel-btn prev-btn" id="prev-btn-psy">&#10094;</button>
+                <button class="carousel-btn next-btn" id="next-btn-psy">&#10095;</button>
+                
+                <div class="carousel-container" id="psy-reviews-carousel">
+
+                    <div class="review-card">
+                        <div class="review-author">Евгения Б.</div>
+                        <p class="review-text">
+                            Теперь я слышу себя, слышу детей, учусь понимать то, что говорит мне их поведение.
+                            <br><br>
+                            Теперь я научилась быть настоящей, без зажимов и программ прошлого, и это такое облегчение! Снят груз обид и страхов.
+                            <br><br>
+                            Благодаря вам, я стала более уверенной в себе, многое себе разрешаю и кайфую от того волшебства, которое происходит каждый день. Крутые проекты, неожиданные предложения и новые возможности, гармония в семье, я точно могу сказать, что счастлива. Благодарю вас.
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">09.12.2024</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-author">Марина К.</div>
+                        <p class="review-text">
+                            Спасибо вам большое. Я на правильном пути и рядом правильные люди. Не хватит слов выразить благодарность, вот я наревелась с этим прощением.
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">24.02.2022</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-author">Варвара Б.</div>
+                        <p class="review-text">
+                            Я пришла на первую консультацию загнанным, не любящим себя человеком, который до ужаса боялся «неправильной» еды и лишних калорий, а также я была очень тревожным человеком, постоянно находилась в этом состоянии, запрещала себе эмоции и старалась искоренить их.
+                            <br><br>
+                            Сейчас же я ощущаю себя абсолютно новой личностью: я научилась принимать свою фигуру, забыла о подсчете и планировании еды, начала принимать свои эмоции и характер такими, какие они есть. У меня пропали многие блоки, загоны, комплексы, а вместо них пришло принятие себя. И всё это - последствия лишь одного приёма! 
+                            <br><br>
+                            Я невероятно рада, что решила посетить ту, самую первую, консультацию.                       
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">12.09.2025</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-author">Светлана Г.</div>
+                        <p class="review-text">
+                            Что меня удивило сильно, так это то, что проблему свою решила Я, а изменения в лучшую сторону произошли и у мужа в работе и у сына (он сам смог за себя постоять в школе) 
+                            <br><br>
+                            Насчёт сына , это вообще удивление, так как он никогда этого не мог делать. Этому конечно я очень удивлена! Благодарю вас. Вы крутой специалист и профессионал своего дела.
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">27.03.2024</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-author">Алена А.</div>
+                        <p class="review-text">
+                            Мой запрос был - Повторная ветрянка у ребенка . Когда мы начали работать с вами, пришло осознание как раз про отношение с сыном в данный момент. Мы проработали ситуацию и за 3 дня куда делась ветрянка...!? До сих пор сама в шоке.. 
+                            <br><br>
+                            Я поняла, что происходит с нашими детьми виноваты только мы сами. Если мы хотим помочь своему ребёнку, нам нужно работать над собой! Спасибо, что вы есть!
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">17.06.2024</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-author">Каролина Д.</div>
+                        <p class="review-text">
+                            Мне очень приятно, ты прирождённый психолог - это прям твоё, чем сейчас ты занимаешься! Я вот анализировала все потихоньку, ты мне сказала сейчас всё то, о чем я думала, прям вообще огонь.
+                            <br><br>
+                            Иногда одно твоё слово просто прям даёт второе дыхание.
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">24.06.2025</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-author">Елена И.</div>
+                        <p class="review-text">
+                            Татьяна это просто богиня чудесная. Были случаи, заклинило спину, был хондроз , копчик защимил. И Татьяна каким то чудесным образом, проработав со мной по видео связи, проговорили все мои проблемы, дошли до детства, и у меня все проходило тут же!!! Это фантастика!! Не надо ни таблеток, ни уколов!! 
+                            <br><br>
+                            Я плакала от радости что так можно все вылечить, просто проработав с человеком!!! Я много познала от Татьяны, и иногда сама пробую с собой работать! Это просто самый чудесный специалист без каких либо лекарств. Благодарю Вас Татьяна.
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">13.04.2023</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-author">Евгения Б.</div>
+                        <p class="review-text">
+                            Татьяна, вы просто волшебница. Не описать словами то, что происходит в моей жизни после знакомства с вами, она просто перевернулась с ног на голову.
+                            <br><br>
+                            Обратившись с проблемами сына, я поняла, что проблемы не у него, а у меня. А ребёнок просто таким образом пытался до меня достучаться, сам того не осознавая. 
+                            <br><br>
+                            После первой нашей встречи начались изменения, а по мере выполнения ваших заданий и практик, сыну становилось всё лучше. И в моей голове всё поменялось.
+                            <br><br>
+                            Теперь я слышу себя, слышу детей, учусь понимать то, что говорит мне их поведение.
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">09.12.2024</div>
+                    </div>
+
+                </div>
+            </div>
         </section>
         
     </main>
 
-        <!-- ВКЛАДКА 2: Контент по Браслетам (изначально скрыта) -->
-        <!-- ВКЛАДКА 2: Контент по Браслетам (изначально скрыта) -->
     <main class="content-wrapper" id="content-bracelets" style="display: none;">
         
-        <!-- Первый блок: Описание и запросы -->
         <section class="glass-box">
             <h2 class="section-title">Программные браслеты</h2>
             
-            <!-- Обертка для изображения -->
             <div class="bracelet-image-wrapper">
-
                 <button class="carousel-btn prev-btn" id="prev-btn">&#10094;</button>
                 <button class="carousel-btn next-btn" id="next-btn">&#10095;</button>
 
                 <div class="carousel-container" id="bracelet-carousel">
-
                     <img src="bracelet-1.jpg" class="carousel-img">
                     <img src="bracelet-2.jpg" class="carousel-img">
                     <img src="bracelet-3.jpg" class="carousel-img">
                     <img src="bracelet-4.jpg" class="carousel-img">
                     <img src="bracelet-5.jpg" class="carousel-img">
+                    <img src="bracelet-6.jpg" class="carousel-img">
+                    <img src="bracelet-7.jpg" class="carousel-img">
+                    <img src="bracelet-8.jpg" class="carousel-img">
+                    <img src="bracelet-9.jpg" class="carousel-img">
+                    <img src="bracelet-10.jpg" class="carousel-img">
+                    <img src="bracelet-11.jpg" class="carousel-img">
                 </div>
             </div>
 
@@ -212,7 +310,6 @@
             
             <p class="tools-subtitle">Запросы, с которыми я работаю:</p>
             
-            <!-- Список запросов в виде тегов -->
             <div class="tools-tags">
                 <span class="tag">Деньги</span>
                 <span class="tag">Отношения</span>
@@ -235,11 +332,9 @@
             </div>
         </section>
 
-        <!-- Второй блок: Методы подбора и вторая карусель -->
         <section class="glass-box">
             <p class="section-intro">Для создания более сильного и эффективного «помощника», использую различные методы подбора:</p>
             
-            <!-- Методы в виде тегов -->
             <div class="tools-tags" style="margin-bottom: 25px;">
                 <span class="tag">Дата рождения</span>
                 <span class="tag">Чакральный разбор</span>
@@ -247,7 +342,6 @@
                 <span class="tag">Интуитивный подбор</span>
             </div>
             
-            <!-- Вторая карусель с новыми ID для стрелочек -->
             <div class="bracelet-image-wrapper">
                 <button class="carousel-btn prev-btn" id="prev-btn-2">&#10094;</button>
                 <button class="carousel-btn next-btn" id="next-btn-2">&#10095;</button>
@@ -261,7 +355,6 @@
             </div>
         </section>
 
-        <!-- Третий блок: Ценность и результаты -->
         <section class="glass-box">
             <div class="value-quote">
                 Заказывая у меня свой талисман, вы получаете не просто камни, вы получаете <strong>решение своей проблемы</strong>, индивидуальный расчет и инструмент поддержки на годы.
@@ -275,9 +368,96 @@
             </p>
         </section>
 
+        <section class="glass-box">
+            <h2 class="section-title">Отзывы</h2>
+            
+            <div class="reviews-wrapper">
+                <button class="carousel-btn prev-btn" id="prev-btn-bracelets">&#10094;</button>
+                <button class="carousel-btn next-btn" id="next-btn-bracelets">&#10095;</button>
+                
+                <div class="carousel-container" id="bracelets-reviews-carousel">
+                    
+                    <div class="review-card">
+                        <div class="review-author">Ксения И.</div>
+                        <p class="review-text">
+                            Татьяна, выражаю вам самые теплые и искренние слова благодарности. То что вы делаете и как вы это делаете по-другому как магией не назовешь.
+                            <br><br>
+                            Если, конечно, выполнять все ваши наставления и рекомендации. С вашей помощью я смогла измениться внутри, открыла в себе что то очень теплое и доброе. В начале было тяжело не понятно зачем и как это мне поможет, хотела все бросить но собралась вспомнила свой запрос и ради кого я это делаю. Сейчас уже все на автомате и с полным осознанием что это и зачем.
+                            <br><br>
+                            Отдельное спасибо за браслеты, это невероятная поддержка. Они работают во благо это прям круто.
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">16.08.2024</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-author">Анастасия К.</div>
+                        <p class="review-text">
+                            Тань я сдала на права, спасибо тебе. Мне казалось что во время экзамена у меня рука горела где браслет надет, это он мне так помогал!
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">23.11.2024</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-author">Анастасия П.</div>
+                        <p class="review-text">
+                            Доброе утро. Хотела поделиться. 
+                            <br><br>
+                            Муж ходил вчера к "ведунье" (так назовём), она заметив браслет, прокомментировала, что браслет настроился на него и работает как "ёжик" оберегает, защищает его.
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">10.03.2025</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-author">Дарья А.</div>
+                        <p class="review-text">
+                            Заказывала браслет с запросом на сдачу экзаменов. Все экзамены сдала на «отлично»! Браслет словно создавал ситуации, которые не вызвали у меня трудностей. На все вопросы теоретической части я знала ответы, а практическая часть была очень интересной и несложной. 
+                            <br><br>
+                            Сам браслет выглядит очень изящно, его цвета сразу мне понравились. Отлично сочетается со всей одеждой, ношу не снимая. Спасибо большое!
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">33.07.2024</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-author">Евгения Б.</div>
+                        <p class="review-text">
+                            И да, браслет реально волшебный, сегодня я выгребла всю последнюю мелочь, чтобы дать курьеру. Сидела и ревела навзрыд от безысходности. Пришли материалы, выкупить не на что, сроки поджимают. В общем, фиаско. 
+                            <br><br>
+                            Попросила его помочь, и мне неожиданно предоплату скинули, выкупила материалы, укладываюсь в сроки.
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">14.02.2025</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-author">Наталья Б.</div>
+                        <p class="review-text">
+                            Таня, привет у меня сейчас всё хорошо! С браслетом у меня ощущения такие, как будто у меня стержень внутри появился, лёгкость.
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">15.10.2026</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-author">Анастасия К.</div>
+                        <p class="review-text">
+                            Хочу сказать огромное спасибо за браслет, который ты сделала для меня он не только очень удобный, красивый, но и со своей функцией справляется на все 100%.                            
+                            <br><br>
+                            Браслет у меня на исполнение желания и вот мое желание наконец то сбылось и в этом я уверена помог мне браслет. Такое чувство было, что когда время исполнения желания настало - рука аж горела теперь, буду ставить новые цели. И уверена, что он меня не подведет.
+                        </p>
+                        <button class="read-more-btn">Читать полностью</button>
+                        <div class="review-date">14.01.2026</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- ВКЛАДКА 3: Связь со мной (изначально скрыта) -->
     <main class="content-wrapper" id="content-contacts" style="display: none;">
         <section class="glass-box">
             <p class="online-text">
@@ -299,13 +479,11 @@
 
             <div class="contact-links-row">
                 <a href="https://t.me/tatyana_goloschapova_psyholog" class="btn-contact btn-tg">
-                    <!-- Иконка Telegram -->
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2L2 10.5L9.5 13.5L14.5 9.5L10.5 14.5L19 21L21.5 2Z"></path></svg>
                     <span class="underlined-text">Telegram</span>
                 </a>
                 
                 <a href="https://www.instagram.com/tatyana_goloschapova_psyholog" class="btn-contact btn-inst">
-                    <!-- Иконка Instagram -->
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                     <span class="underlined-text">Instagram</span>
                 </a>
@@ -318,4 +496,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
